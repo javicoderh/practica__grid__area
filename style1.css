@@ -15,13 +15,95 @@ body {
 }
 
 .container__rightcorner {
+ display:flex;
  width: 100%;
  height: 100%;
- background-color: purple;
+ background-color: rgb(0, 0, 0);
  grid-column-start: 3;
  grid-column-end: 3;
  grid-row-start: 1;
- grid-row-end: 1;
+ grid-row-end: 1;  
+}
+
+.animated {
+ display: none;
+ border-radius: 50%;
+ width: 20px;
+ height: 20px;
+ margin: 5px;
+ background-color: rgb(22, 184, 54); 
+}
+
+.animated:target {
+ display: block;
+ border-radius: 50%;
+ width: 20px;
+ height: 20px;
+ margin: 5px;
+ background-color: rgb(26, 255, 0);
+ animation: javi 4s linear infinite forwards;
+}
+
+@keyframes javi {
+ 0% {
+  
+ }
+ 
+ 25% {  
+  transform:scale(1.05) translatex(2540%);
+ }
+
+ 50% {  
+  transform:scale(1.05) translatex(2540%) translatey(1114%);
+ }
+
+ 75% {  
+  transform:scale(1.05) translatex(0%) translatey(1114%);    
+ }
+
+ 100% {  
+  transform:scale(1.05) translatex(0%)translatey(0%);
+ }
+}
+
+
+
+button {
+ width: 30px;
+ height: 30px; 
+ border-radius: 50%;
+ border: solid rgb(126, 119, 119) 1px; 
+}
+
+.on {
+ background-color: rgb(71, 154, 32);
+ position: absolute;
+ top: 110px;
+ left: 1300px;
+}
+
+.on:hover {
+ background-color: rgb(81, 255, 0);
+ transform: scale(1.15);
+ transition: 0.4s;
+ box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+ font-weight: 700;
+ border: solid rgb(126, 119, 119) 1.5px;
+}
+
+.off {
+ background-color: rgb(155, 47, 27);
+ position: absolute;
+ top: 110px;
+ left: 1470px; 
+}
+
+.off:hover {
+ background-color: rgb(255, 0, 0);
+ transform: scale(1.15);
+ transition: 0.4s;
+ box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5);
+ font-weight: 700;
 }
 
 .container__lefttcorner { 
